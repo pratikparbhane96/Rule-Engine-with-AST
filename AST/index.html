@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule Engine with AST</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <h1>Rule Engine with AST</h1>
+
+    <section>
+        <h2>Create Rule</h2>
+        <form id="createRuleForm">
+            <label for="ruleString">Rule String:</label><br>
+            <textarea id="ruleString" name="rule_string" rows="4" cols="50" placeholder="(age &gt; 30 AND department = 'Sales') OR (age &lt; 25 AND department = 'Marketing')"></textarea><br>
+            <button type="submit">Create Rule</button>
+        </form>
+        <div id="createRuleResult"></div>
+    </section>
+
+    <section>
+        <h2>Evaluate Rule</h2>
+        <form id="evaluateRuleForm">
+            <label for="ruleId">Rule ID:</label><br>
+            <input type="text" id="ruleId" name="rule_id" placeholder="Enter Rule ID"><br>
+            <label for="data">Data (JSON format):</label><br>
+            <textarea id="data" name="data" rows="4" cols="50" placeholder='{"age": 28, "department": "Sales"}'></textarea><br>
+            <button type="submit">Evaluate Rule</button>
+        </form>
+        <div id="evaluateRuleResult"></div>
+    </section>
+</body>
+</html>
